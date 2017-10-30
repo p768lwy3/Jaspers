@@ -35,16 +35,31 @@ def count_vector(sent, max_df=0.95, min_df=2):
   tf = tf_vectorizer.fit_transform(sent).toarray() # shape = (19xxx, 15xxx)
   return tf
 
-""" It seems not useful for text analysis, """
-def bucketing(sents, buckets_ = [[10],[15],[25],[50]]):
-  d = {}
-  for sent in sents:
-    for bucket in buckets_
-      if len(sent) <= bucket:
-        if bucket not in d:
-          d[bucket] = [sent]
+"""
+  Bucketing, 
+  rmk: doing padding and using hstack with array to save the result is much slower compare with list.append()...
+"""
+def bucketing(X_vector, y_train, padding=True, padding_from_head=False, var_len=200, buckets = [15, 25, 40, 75]):
+  dx = {}; dy = {}
+  counter = 0
+  for i in range(len(X_vector)):
+    s = X_vector[i]
+    y = y_train[i]
+    for b in buckets:
+      if len(s) <= b:
+        if padding == True:
+          zeros = np.zeros([b-len(s), var_len])
+          s = np.vstack([zeros, s]) if padding_from_head == True else np.vstack([s, zeros])
+        if b not in d:
+          dx[b] = np.array([s])
+          dy[b] = np.array([y])
         else:
-          d[bucket].append(sent)
+          dx[b] = np.append(dx[b], [s], axis=0)
+          dy[b] = np.append(dy[b], [y], axis=0)
+        break
+    counter += 1
+    if counter % 1000 == 0:
+      print('  Now is the %d-th lines...' % counter)
   return d
 
 """
