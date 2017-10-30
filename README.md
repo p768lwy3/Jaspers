@@ -1,2 +1,3 @@
-#Machine Learning Self Study
-Here is small projects to learn machine learning
+# Machine Learning Self Study
+</br>
+Here is small projects to learn machine learning </br>
