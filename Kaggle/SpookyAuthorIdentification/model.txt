@@ -4,8 +4,9 @@ This file is for record the old version model.
 Rmk: 
 How to use LSTM to train nn-classifier?
 How to do masking with NLP?
+Should TimeDistributed be used? Also Masking...
 Is it better to do bucketing with different length? Or take batch_size equal to 1?
-    
+
 Ref Link:
 Dataset:
   https://www.kaggle.com/c/spooky-author-identification/data
@@ -24,6 +25,9 @@ How to choose # of hidden layers unit: Nh = Ns/(alpha*(Ni+No)), 2<alpha<10 or = 
 
 Text Classification with NLTK and Scikit-Learn:
   https://bbengfort.github.io/tutorials/2016/05/19/text-classification-nltk-sckit-learn.html
+
+Analysis and Optimization of Convolutional Neural Network Architectures:
+  https://arxiv.org/pdf/1707.09725.pdf#page=11
 """
 
 
