@@ -1,5 +1,8 @@
+"""
+  The File for runing neural network model
+"""
 
-# https://arxiv.org/pdf/1707.09725.pdf#page=11
+# Import:
 import json
 import keras
 import matplotlib.pyplot as plt
@@ -12,14 +15,6 @@ from keras.layers import Conv1D, Dense, Dropout, Flatten, GlobalAveragePooling1D
 from keras.optimizers import SGD
 
 import data_utils
-
-# TimeDistributed should be used? also masking
-
-"""
-for cur_unit in range(num_recurrent_units):
-    nn.add(LSTM(128, activation='relu', return_sequences=True))
-"""
-
 
 def create_model(var_len=200, num_recurrent_units=3):
   nn = Sequential()
@@ -45,7 +40,6 @@ def create_model(var_len=200, num_recurrent_units=3):
   sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
   nn.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy']) 
   print(nn.summary())
-
   return nn
 
 def main(PLOT=True, SAVE=False, ALLDATA=True, batch_size=200):
@@ -127,7 +121,6 @@ def main(PLOT=True, SAVE=False, ALLDATA=True, batch_size=200):
       jfile.write(model_json)
     model.save_weights(mpath)
     print('  Saved Model to disk...')
-
 
 if __name__ == '__main__':
   main()
