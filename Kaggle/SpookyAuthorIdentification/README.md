@@ -5,7 +5,6 @@
     2. Throw away any words that occur too frequently or infrequently</br>
     3. Stemming words</br>
     4. Converting text into vector format</br>
-</br>
 2. Classifier (main.py): </br>
 Build Neural Network for classifier</br>
 3. Record (model.txt): </br>
