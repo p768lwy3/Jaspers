@@ -2,6 +2,8 @@
 
 ## New:
   with embedding layers, it will have a much better result with a simple tokenizing and vectorizing.
+  ![Accuracy](https://github.com/p768lwy3/Small_Project_Machine_Learning_for_selfstudy/blob/master/Kaggle/SpookyAuthorIdentification/pic/model_accuracy.png)
+  ![Loss Function](https://github.com/p768lwy3/Small_Project_Machine_Learning_for_selfstudy/blob/master/Kaggle/SpookyAuthorIdentification/pic/model_loss.png)
 
 ## Old:
     1. Preprocessing ([data_utils.py](https://github.com/p768lwy3/Small_Project_Machine_Learning_for_selfstudy/blob/master/Kaggle/SpookyAuthorIdentification/data_utils.py)): </br>
