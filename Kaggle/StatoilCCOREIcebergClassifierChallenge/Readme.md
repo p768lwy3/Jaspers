@@ -1,6 +1,7 @@
 # Statoil/C-CORE Iceberg Classifier Challenge
 [Here is the link to Kaggle..](https://www.kaggle.com/c/statoil-iceberg-classifier-challenge) </br>
 This is a model using CNN to classify iceberg and ship. </br>
+You can find the data in the link above. </br>
 
 ## Some Data Visulization:
 ![2D ice berg](https://github.com/p768lwy3/Small_Project_Machine_Learning_for_selfstudy/blob/master/Kaggle/StatoilCCOREIcebergClassifierChallenge/pic/iceberg2d.png)
